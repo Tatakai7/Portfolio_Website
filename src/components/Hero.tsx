@@ -19,7 +19,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
           <div className="relative w-32 h-32 mx-auto rounded-full border-4 border-white shadow-2xl mb-4 overflow-hidden">
             <img 
-              src="src/assets/kiyotaka.jpg"
+              src="/src/assets/kiyotaka.jpg"
               alt="kiyotaka"
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
             />
@@ -63,7 +63,7 @@ export default function Hero() {
             <Linkedin size={24} />
           </a>
           <a
-            href="mailto:caberteraymond123@gmail.com"
+            href="mailto:defaultface0@gmail.com"
             title="Email"
             target="_blank"
             rel="noopener noreferrer"
