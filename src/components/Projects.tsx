@@ -128,11 +128,7 @@ export default function Projects() {
           {/* Scrollable Projects Container */}
           <div
             ref={scrollContainer}
-            className="flex gap-8 overflow-x-auto scrollbar-hide pb-4 px-12 scroll-smooth"
-            style={{
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-            }}
+            className="flex gap-8 overflow-x-auto scrollbar-hide pb-4 px-12 scroll-smooth hide-scrollbar"
           >
           {projects.map((project) => (
             <div
