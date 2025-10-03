@@ -86,19 +86,19 @@ export default function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-2 border-gray-200 dark:border-gray-600 w-full transform hover:-translate-y-1"
             >
-              <div className="text-center mb-6">
+              <div className="text-center mb-4 md:mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                   {category.title}
                 </h3>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 {category.skills.map((skill, index) => (
                   <div key={index} className="relative">
-                    <div className="flex items-center p-3 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-300">
+                    <div className="flex items-center p-2 md:p-3 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-600">
                       {skill.icon}
-                      <span className="text-gray-700 dark:text-gray-300 font-medium ml-3">
+                      <span className="text-gray-700 dark:text-gray-300 font-medium ml-2 md:ml-3 text-sm md:text-base">
                         {skill.name}
                       </span>
                     </div>
@@ -110,20 +110,20 @@ export default function Skills() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center space-x-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 p-4 md:p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">5+</div>
-              <div className="text-gray-600 dark:text-gray-400">Years Experience</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">5+</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">Years Experience</div>
             </div>
-            <div className="w-px h-12 bg-gray-300 dark:bg-gray-600"></div>
+            <div className="hidden sm:block w-px h-12 bg-gray-300 dark:bg-gray-600"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">50+</div>
-              <div className="text-gray-600 dark:text-gray-400">Projects Completed</div>
+              <div className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-purple-400">50+</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">Projects Completed</div>
             </div>
-            <div className="w-px h-12 bg-gray-300 dark:bg-gray-600"></div>
+            <div className="hidden sm:block w-px h-12 bg-gray-300 dark:bg-gray-600"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-teal-600 dark:text-teal-400">100%</div>
-              <div className="text-gray-600 dark:text-gray-400">Client Satisfaction</div>
+              <div className="text-2xl md:text-3xl font-bold text-teal-600 dark:text-teal-400">100%</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">Client Satisfaction</div>
             </div>
           </div>
         </div>

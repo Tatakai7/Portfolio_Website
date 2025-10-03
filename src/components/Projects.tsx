@@ -43,8 +43,8 @@ export default function Projects() {
       title: 'Resort Vacation Static Website',
       description: 'Curated guides to beaches, caves, island-hopping, snorkeling, and local cuisine in a modern travel interface.',
       technologies: ['Vite', 'Typescript', 'React', 'Shadcn-ui', 'Tailwind CSS'],
-      image_url: '/src/assets/resort.png',
-      demo_url: 'https://resort-vacation.vercel.app/',
+      image_url: '/public/images/resort.png',
+      demo_url: 'https://resort-vacation.vercel.app',
       github_url: 'https://github.com/Tatakai7/Resort-Vacation-Static-Website',
       featured: true,
       created_at: '2025-01-01'
@@ -53,8 +53,8 @@ export default function Projects() {
       id: '2',
       title: 'Chat Application Web App',
       description: 'Real-time MERN chat app with authentication, messaging, status, and rooms.',
-      technologies: ['React', 'Node.js', 'Socket.IO', 'MongoDB'],
-      image_url: '/src/assets/messenger_login.png',
+      technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+      image_url: '/public/images/messenger_login.png',
     //   demo_url: 'https://demo.example.com',
       github_url: 'https://github.com/Tatakai7/Chat_Application_Web_App',
       featured: true,
@@ -65,7 +65,7 @@ export default function Projects() {
       title: 'Equipment Requisition Web App',
       description: 'Comprehensive equipment requisition system with user roles, inventory management, and reporting features.',
       technologies: ['Vite', 'SolidJS', 'Node.js', 'Bootstrap', 'SQL'],
-      image_url: '/src/assets/adminPage.png',
+      image_url: '/public/images/adminPage.png',
     //   demo_url: 'https://demo.example.com',
       github_url: 'https://github.com/Tatakai7/Equipment_Requisition_Web_App',
       featured: true,
@@ -112,7 +112,7 @@ export default function Projects() {
           <button
             onClick={scrollLeft}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 border border-gray-200 dark:border-gray-600"
-            title="Scroll left"
+            aria-label="Scroll projects left"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-300" />
           </button>
@@ -120,7 +120,7 @@ export default function Projects() {
           <button
             onClick={scrollRight}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 border border-gray-200 dark:border-gray-600"
-            title="Scroll right"
+            aria-label="Scroll projects right"
           >
             <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-300" />
           </button>
@@ -128,7 +128,11 @@ export default function Projects() {
           {/* Scrollable Projects Container */}
           <div
             ref={scrollContainer}
-            className="flex gap-8 overflow-x-auto scrollbar-hide pb-4 px-12 scroll-smooth custom-scrollbar"
+            className="flex gap-8 overflow-x-auto scrollbar-hide pb-4 px-12 scroll-smooth"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+            }}
           >
           {projects.map((project) => (
             <div
@@ -177,7 +181,7 @@ export default function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                        title="View Demo"
+                        aria-label={`View ${project.title} demo`}
                       >
                         <ExternalLink size={18} />
                       </a>
@@ -188,7 +192,7 @@ export default function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                        title="View on GitHub"
+                        aria-label={`View ${project.title} source code on GitHub`}
                       >
                         <Github size={18} />
                       </a>
