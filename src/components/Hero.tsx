@@ -54,7 +54,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
           <div className="relative w-32 h-32 mx-auto rounded-full border-4 border-white shadow-2xl mb-4 overflow-hidden">
             <img 
-              src="/public/images/kiyotaka.jpg"
+              src="/images/kiyotaka.jpg"
               alt="John Raymond Caberte"
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
             />
