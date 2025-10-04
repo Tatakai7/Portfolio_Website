@@ -46,9 +46,8 @@ export default function Header() {
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                   <div className="absolute inset-0 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
                 </div>
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
                   Open Commission
-                </span>
+                
               </div>
             </div>
 
